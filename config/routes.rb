@@ -1,7 +1,7 @@
 Jiwani::Application.routes.draw do
 
   # Home
-  get "/" => 'home#show'
+  root 'home#show'
 
   # Member
   get "/members/new" => 'members#new'
@@ -9,11 +9,17 @@ Jiwani::Application.routes.draw do
   get "/members/:member_id/show" => 'members#show'
 
   # Message Board
-  get "/msgboard/show" => 'msgboard#show'
+  get "/msgboard" => 'msgboard#show'
 
   # Login/Logout
   get "/login" => 'sessions#new'
   get "/logout" => 'sessions#destroy'
   get "/authenticate" => 'sessions#create'
+
+  # New Products
+  get "/products" => 'products#show'
+
+  # Store locations
+  get "/locations" => 'locations#show'
 
 end
