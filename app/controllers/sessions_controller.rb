@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   def new
+    params[:name]
   end
 
   def destroy
@@ -11,8 +12,8 @@ class SessionsController < ApplicationController
       member = Member.find_by(:first_name => params[:name])
       if member.present?
           if member.password == params[:pwd]
-            session[:member_id] = member.id
-            redirect_to root_url, notice: "Welcome to Jiwani!"
+            session[:name] = member.first_name
+            redirect_to root_url, notice: "Welcome to Bespoke2Bespoke #{member.first_name}!"
           else
             redirect_to root_url, notice: "Your password is incorrect. Please try your password again."
           end

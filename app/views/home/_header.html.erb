@@ -5,6 +5,10 @@
 <!--   <li><a href="/locations">Locations</a></li> (Not for Winter 2014)-->
   <li><a href="/members">Dealers</a></li>
   <li><a href="/weather">Weather</a></li>
+  <div class="page-header">
+  <li><%= session[:name] %></li>
+  <%= link_to "Sign Out", "/logout", :class => "btn btn-md btn-success pull-right" %>
+  </div>
 </ul>
 
 

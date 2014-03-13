@@ -2,7 +2,18 @@ class MsgboardController < ApplicationController
   
   def index
   @msgboard_list = Msgboard.all
+  member = Member.find_by(:first_name => params[:name])
+  if member.present?
+  # if member.password == params[:pwd]
+     session[:name] = member.first_name
+  redirect_to "/msgboard/show"
+else
+  redirect_to root_url, notice: "Sorry, this page is for members only.  Please Sign up!"
   end
+end
+# end 
+
+
 
   def show
   # @message = Msgboard.find_by(id: => params[:msgboard_id])	

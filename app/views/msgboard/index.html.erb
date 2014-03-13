@@ -4,7 +4,7 @@
   </div>
 
 <% @msgboard_list.each do |message| %>
-	<div class="row">
+  <div class="row">
     <div class="col-md-8">
       <h3><a href="/msgboard/<%= message.id %>/show"><%= message.title %></a></h3>
       <p class="lead"><%= message.message%></p>
