@@ -1,4 +1,4 @@
-<h1> SHOW ME SOME MESSAGES! </h1>
+<h1> Message Board </h1>
 <div class="page-header">
   <%= link_to "Add a New Message", "/msgboard/new", :class => "btn btn-md btn-success pull-right" %>
   </div>
@@ -12,7 +12,7 @@
     </div>
   </div>
 
-   <%= link_to "Delete", "/msgboard/#{message.id}/delete" %> 
+   <%= link_to "Delete", "/msgboard/#{message.id}/delete" %>
   <% end %>
 
 

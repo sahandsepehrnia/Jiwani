@@ -3,7 +3,7 @@ Jiwani::Application.routes.draw do
   # Home
   root 'home#show'
 
-  # Member
+  # Members/Dealers
   get "/members/new" => 'members#new'
   get "/members/create" => 'members#create'
   get "/members" => 'members#index'
@@ -25,9 +25,9 @@ Jiwani::Application.routes.draw do
   get "/products" => 'products#index'
   get "/products/:product_id/show" => 'products#show'
 
-  # Store locations
-  get "/locations" => 'locations#index'
-  get "/locations/:location_id/show" => 'locations#show'
+  # Store locations (Not included/hidden for Winter 2014)
+  # get "/locations" => 'locations#index'
+  # get "/locations/:location_id/show" => 'locations#show'
 
   # Weather
   get "/weather" => "weather#search"
