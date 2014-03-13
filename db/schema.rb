@@ -11,7 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140306175922) do
+ActiveRecord::Schema.define(version: 20140311222550) do
+
+  create_table "dealer_locations", force: true do |t|
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.integer  "zip"
+    t.string   "description"
+    t.integer  "phone"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "locations", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "members", force: true do |t|
     t.string   "first_name"
@@ -19,6 +35,44 @@ ActiveRecord::Schema.define(version: 20140306175922) do
     t.string   "password"
     t.string   "company"
     t.string   "location"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "message_boards", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "msgboards", force: true do |t|
+    t.string   "title"
+    t.string   "message"
+    t.integer  "date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "new_products", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "products", force: true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.integer  "price"
+    t.string   "image_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "store_locations", force: true do |t|
+    t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.integer  "zip"
+    t.string   "description"
+    t.integer  "phone"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,0 +1,13 @@
+<h1> Show me some locations! </h1>
+
+<% @location_list.each do |location| %>
+	<div class="row">
+    <div class="col-md-8">
+      <h3><a href="/locations/<%= location.id %>/show"><%= location.address %></a></h3>
+      <p class="lead"><%= location.city %></p>
+      <p><%= location.state %></p>
+      <p><%= location.description %></p>
+      <p><%= location.zip %></p>
+    </div>
+  </div>
+  <% end %>

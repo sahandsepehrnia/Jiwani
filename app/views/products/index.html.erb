@@ -1,0 +1,12 @@
+<h1> Spring 2014 Collection </h1>
+
+<% @product_list.each do |product| %>
+	<div class="row">
+    <div class="col-md-12">
+      <h3><a href="/products/<%= product.id %>/show"><%= product.name %></a></h3>
+      <p><%= product.price %></p>
+      <p><%= product.image_url %></p>
+      <p class="lead"><%= product.description%></p>
+    </div>
+  </div>
+  <% end %>

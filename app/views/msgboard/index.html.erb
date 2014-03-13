@@ -1,0 +1,19 @@
+<h1> SHOW ME SOME MESSAGES! </h1>
+<div class="page-header">
+  <%= link_to "Add a New Message", "/msgboard/new", :class => "btn btn-md btn-success pull-right" %>
+  </div>
+
+<% @msgboard_list.each do |message| %>
+	<div class="row">
+    <div class="col-md-8">
+      <h3><a href="/msgboard/<%= message.id %>/show"><%= message.title %></a></h3>
+      <p class="lead"><%= message.message%></p>
+      <p><%= message.date %></p>
+    </div>
+  </div>
+
+   <%= link_to "Delete", "/msgboard/#{message.id}/delete" %> 
+  <% end %>
+
+
+

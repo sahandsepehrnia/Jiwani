@@ -1,0 +1,10 @@
+
+<% @member_list.each do |member| %>
+	<div class="row">
+    <div class="col-md-8">
+      <h3><a href="/members/<%= member.id %>/show"><%= member.first_name %> <%= member.last_name %></a></h3>
+      <p class="lead"><%= member.company%></p>
+      <p><%= member.location %></p>
+    </div>
+  </div>
+  <% end %>
