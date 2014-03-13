@@ -30,6 +30,7 @@ Jiwani::Application.routes.draw do
   get "/locations/:location_id/show" => 'locations#show'
 
   # Weather
-  get "/weather" => "weather#show"
+  get "/weather" => "weather#search"
+  get "/weather/results" => "weather#results"
 
 end

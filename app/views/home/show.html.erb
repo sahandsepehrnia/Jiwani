@@ -16,51 +16,37 @@
   </head>
 
   <body>
-
-        <div class="site-wrapper"> <!-- Centers header -->
-
+    <div class="site-wrapper"> <!-- Centers header -->
       <div class="site-wrapper-inner"> <!-- Centers body -->
-
         <div class="cover-container"> <!-- Puts header on top -->
-
-          <div class="masthead clearfix">
-        <!--     <div class="inner"> -->
-              <a href="/"><h3 class="masthead-brand">Bespoke2Bespoke</h3></a>
-              <ul class="nav masthead-nav">
-                <li class="active"><a href="/products">New Products</a></li>
-                <li><a href="/msgboard">Message Board</a></li>
-                <li><a href="/locations">Locations</a></li>
-                <li><a href="/members">Dealers</a></li>
-              </ul>
-            </div>
+          <div class="masthead clearfix"> <!--     <div class="inner"> -->
+            <%= render 'header' %>
           </div>
-
-          <div class="inner cover">
-          <!-- Remember to insert photo here -->
-            <h1 class="cover-heading">Jiwani</h1>
-            <p class="lead">The best in custom suits</p>
-            <p class="lead">
-              <%= link_to "New Members", "/members/new", :class => "btn btn-lg btn-default" %>
-              <%= link_to "Existing Members", "/login", :class => "btn btn-lg btn-default" %>
-
-            </p>
-          </div>
-
-            <div class="container">
-            <% if notice.present? %>
-            <div class="alert alert-dismissable alert-success">
-            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-           <%= notice %>
-          </div>
-         <% end %>
-
-          </div>
-
         </div>
+      <div class="inner cover"> <!-- Remember to insert photo here -->
+      <h1 class="cover-heading">Jiwani</h1>
+      <p class="lead">The best in custom suits</p>
+      <p class="lead">
+        <%= link_to "New Members", "/members/new", :class => "btn btn-lg btn-default" %>
+        <%= link_to "Existing Members", "/login", :class => "btn btn-lg btn-default" %>
+      </p>
+    </div>
+
+        <div class="container">
+        <% if notice.present? %>
+        <div class="alert alert-dismissable alert-success">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+       <%= notice %>
+      </div>
+     <% end %>
 
       </div>
 
     </div>
+
+  </div>
+
+</div>
 
 
 
