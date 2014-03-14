@@ -34,17 +34,17 @@ Product.destroy_all
 product_list = [ { :name => "Custom Made Blazer (Navy)",
                   :description => "A staple for any closet; The Navy Blazer provides year-round versatility with elegant style",
                   :price => "795",
-                  # :image_url => "" need URL
+                  :image_url => "http://dz7abk7jlh1eg.cloudfront.net/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/j/k/jkt-nsc_tall_front.jpg"
                   },
               { :name => "Formal Cufflinks",
                   :description => "A must for formal settings, these cufflinks provide a superior touch to any outfit",
                   :price => "200",
-                  # :image_url => "" need URL
+                  :image_url => "http://aucoinhart.com/wp-content/uploads/2012/11/Silver-Cufflinks.jpg"
                   },
                 { :name => "Slim Fit Suit (Charcoal Grey)",
                   :description => "Modern style, Classic look. The Slim Fit Suit is perfect for an important meeting or night on the town",
                   :price => "1995",
-                  # :image_url => "" need URL
+                  :image_url => "http://slimages.macys.com/is/image/MCY/products/4/optimized/914844_fpx.tif?01AD=3QJQgekLEPBWA_c-CtYPZYTrIvB3bahsvTNpBMGpS4TKILFk8MPslIA&01RI=6D8DA9CA603FE8B&01NA=&$filterlrg$&wid=370"
                   },]
 
 product_list.each do |product_info|
