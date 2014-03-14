@@ -2,11 +2,11 @@
 
 <% @product_list.each do |product| %>
 	<div class="row">
-    <div class="col-md-12">
+    <div class="col-md-8" align="left">
       <h3><a href="/products/<%= product.id %>/show"><%= product.name %></a></h3>
-      <p><%= product.price %></p>
       <p><a href="/products/<%= product.id %>/show"><img width="200" src="<%= product.image_url %>"></a>
-      <p class="lead"><%= product.description%></p>
+      <p>$<%= product.price %></p>
+      <p class="lead"><%= product.description%> </p>
     </div>
   </div>
   <% end %>

@@ -20,15 +20,33 @@
       <div class="site-wrapper-inner"> <!-- Centers body -->
         <div class="cover-container"> <!-- Puts header on top -->
           <div class="masthead clearfix"> <!--     <div class="inner"> -->
-            <%= render 'header' %>
+            <a href="/"><h3 class="masthead-brand">Bespoke2Bespoke</h3></a>
+              <ul class="nav masthead-nav">
+                <li><a href="/products">Products</a></li>
+                <li><a href="/msgboard">Message Board</a></li>
+                <li><a href="/members">Dealers</a></li>
+                <li><a href="/weather">Weather</a></li>
+              <!--   <li><a href="/locations">Locations</a></li> (Not for Winter 2014)-->
+                  <% member = Member.find_by(:first_name => session[:name]) %>
+                  <% if member.present? %>
+                <li> <%= link_to session[:name] %> </li>
+                <li><%= link_to "Sign Out", "/logout", :class => "btn btn-md btn-fail pull-center" %></li>
+                  <% end %>
+                <div class="page-header">
+                </div>
+              </ul>
           </div>
         </div>
       <div class="inner cover"> <!-- Remember to insert photo here -->
       <h1 class="cover-heading">Jiwani</h1>
       <p class="lead">The best in custom suits</p>
       <p class="lead">
-        <%= link_to "New Members", "/members/new", :class => "btn btn-lg btn-default" %>
-        <%= link_to "Existing Members", "/login", :class => "btn btn-lg btn-default" %>
+        <% member = Member.find_by(:first_name => session[:name]) %>
+        <% if member.present? %>
+        <% else %>
+         <%= link_to "New Members", "/members/new", :class => "btn btn-lg btn-default" %>
+         <%= link_to "Existing Members", "/login", :class => "btn btn-lg btn-default" %>
+        <% end %>
       </p>
     </div>
 

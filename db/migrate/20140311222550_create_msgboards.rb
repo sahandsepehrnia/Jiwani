@@ -4,7 +4,6 @@ class CreateMsgboards < ActiveRecord::Migration
       t.string :title
       t.string :message
       t.integer :date
-
       t.timestamps
     end
   end

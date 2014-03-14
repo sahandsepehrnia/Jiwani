@@ -14,7 +14,7 @@ Jiwani::Application.routes.draw do
   get "/msgboard/create" => 'msgboard#create'
   get "/msgboard/show" => 'msgboard#show'
   get "/msgboard/new" => 'msgboard#new'
-  get "/msgboard/:message_id/delete" => 'msgboard#destroy'
+  get "/msgboard/:msgboard_id/delete" => 'msgboard#destroy'
 
   # Login/Logout
   get "/login" => 'sessions#new'
