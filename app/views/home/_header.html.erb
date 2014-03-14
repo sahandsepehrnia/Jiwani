@@ -1,13 +1,13 @@
 <a href="/"><h3 class="masthead-brand">Bespoke2Bespoke</h3></a>
 <ul class="nav masthead-nav">
-  <li class="active"><a href="/products">Products</a></li>
+  <li><a href="/products">Products</a></li>
   <li><a href="/msgboard">Message Board</a></li>
-<!--   <li><a href="/locations">Locations</a></li> (Not for Winter 2014)-->
   <li><a href="/members">Dealers</a></li>
   <li><a href="/weather">Weather</a></li>
-  <div class="page-header">
+<!--   <li><a href="/locations">Locations</a></li> (Not for Winter 2014)-->
   <li><%= session[:name] %></li>
-  <%= link_to "Sign Out", "/logout", :class => "btn btn-md btn-success pull-right" %>
+  <li><%= link_to "Sign Out", "/logout", :class => "btn btn-md btn-success pull-down" %></li>
+  <div class="page-header">
   </div>
 </ul>
 
