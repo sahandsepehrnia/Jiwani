@@ -74,9 +74,9 @@ msgboard_list = [ {:title => "Excellent Way to Increase Sales",
 
 msgboard_list.each do |msgboard_info|
   b = Msgboard.new
-  b.name = msgboard_info[:title]
-  b.message = product_info[:message]
-  b.date = product_info[:date]
+  b.title = msgboard_info[:title]
+  b.message = msgboard_info[:message]
+  b.date = msgboard_info[:date]
   b.save
  end
 
