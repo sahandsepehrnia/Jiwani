@@ -34,6 +34,7 @@ end
     message.title = params["title"]
     message.message = params["message"]
     message.date = params["date"]
+    message.member_id = session[:name]
     message.save
     redirect_to "/msgboard"
   end

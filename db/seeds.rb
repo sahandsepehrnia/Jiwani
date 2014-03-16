@@ -61,15 +61,15 @@ product_list.each do |product_info|
 Msgboard.destroy_all
 msgboard_list = [ {:title => "Excellent Way to Increase Sales",
                   :message => "Recently asked my top customer to let me hold a luncheon at his office; got five new referrals!",
-                  :date => "02/15/14",
+                  :date => "2014",
                   },
               { :title => "Gift Certificates",
                   :message => "Using gift certificates has replaced my need to advertise online!",
-                  :date => "03/01/2014",
+                  :date => "2014",
                   },
                 { :title => "MBA Seminars",
                   :message => "Holding seminars at business schools has opened up an entire new market for my business!",
-                  :date => "03/15/2014",
+                  :date => "2013",
                   },]
 
 msgboard_list.each do |msgboard_info|

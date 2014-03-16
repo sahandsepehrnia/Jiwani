@@ -6,8 +6,5 @@ class CreateMembers < ActiveRecord::Migration
       t.string :password
       t.string :company
       t.string :location
-
       t.timestamps
     end
-  end
-end
